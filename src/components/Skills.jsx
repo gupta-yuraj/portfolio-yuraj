@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
+<<<<<<< HEAD
 import { usePortfolioData } from "../context/PortfolioDataContext";
+=======
+import { businessSkills, softwareSkills, typingSpeed } from "../data/portfolioData";
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 import { FiCheck } from "react-icons/fi";
 
 function BentoCard({ skill, i, big }) {
@@ -34,7 +38,10 @@ function BentoCard({ skill, i, big }) {
 }
 
 export default function Skills() {
+<<<<<<< HEAD
   const { businessSkills, softwareSkills, typingSpeed } = usePortfolioData();
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   return (
     <section id="skills" className="section-pad relative">
       <div className="max-w-6xl mx-auto px-6">

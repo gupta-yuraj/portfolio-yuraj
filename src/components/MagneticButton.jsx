@@ -1,7 +1,11 @@
 import { useRef } from "react";
 
 /* Magnetic + ripple button used across the site */
+<<<<<<< HEAD
 export default function MagneticButton({ children, onClick, className = "", as = "button", href, type, ...rest }) {
+=======
+export default function MagneticButton({ children, onClick, className = "", as = "button", href, type }) {
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   const ref = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -45,9 +49,16 @@ export default function MagneticButton({ children, onClick, className = "", as =
         onClick?.(e);
       }}
       className={`magnetic-btn ripple-el cursor-hover ${className}`}
+<<<<<<< HEAD
       {...rest}
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
     >
       {children}
     </Comp>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3e28ed9 (fix vercel deployment issue)

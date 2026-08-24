@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { FiDownload, FiMail, FiArrowDown } from "react-icons/fi";
+<<<<<<< HEAD
 import { usePortfolioData } from "../context/PortfolioDataContext";
+=======
+import { personal, heroSubtitle, dashboardMetrics } from "../data/portfolioData";
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 import MagneticButton from "./MagneticButton";
 
 const container = {
@@ -13,7 +17,10 @@ const item = {
 };
 
 export default function Hero() {
+<<<<<<< HEAD
   const { personal, heroSubtitle, dashboardMetrics, resumeUrl } = usePortfolioData();
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
@@ -40,9 +47,13 @@ export default function Hero() {
           <motion.div variants={item} className="flex flex-wrap gap-4">
             <MagneticButton
               as="a"
+<<<<<<< HEAD
               href={resumeUrl}
               target="_blank"
               rel="noreferrer"
+=======
+              href="/Yuraj_Gupta_Resume.pdf"
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-highlight px-6 py-3.5 text-sm font-semibold text-white glow-hover"
             >
               <FiDownload /> Download Resume

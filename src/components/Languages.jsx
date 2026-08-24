@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
+<<<<<<< HEAD
 import { usePortfolioData } from "../context/PortfolioDataContext";
+=======
+import { languages } from "../data/portfolioData";
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 
 function CircleCard({ lang, i }) {
   const radius = 42;
@@ -45,7 +49,10 @@ function CircleCard({ lang, i }) {
 }
 
 export default function Languages() {
+<<<<<<< HEAD
   const { languages } = usePortfolioData();
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   return (
     <section id="languages" className="section-pad relative">
       <div className="max-w-4xl mx-auto px-6">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Yuraj Gupta — Premium Portfolio (with Admin Panel + Supabase Backend)
 
 A premium, animated personal-brand portfolio for **Yuraj Gupta** — plus a password-protected `/admin` panel backed by **Supabase** so every section of the site (profile, skills, projects, achievements, resume, contact messages…) can be edited without touching code.
@@ -75,11 +76,78 @@ List-type sections (skills, projects, education, etc.) support add / edit / dele
 The public contact form validates client-side, then inserts directly into the `messages` table (RLS allows public **insert only** — nobody but the signed-in admin can read past submissions). They show up immediately under **Admin → Messages**, newest first, with an unread badge.
 
 Optionally, you can *also* fire an EmailJS notification on submit: open `src/components/Contact.jsx` and replace the `YOUR_SERVICE_ID` / `YOUR_TEMPLATE_ID` / `YOUR_PUBLIC_KEY` placeholders with your own [EmailJS](https://www.emailjs.com/) credentials. This is optional — messages are saved to Supabase either way.
+=======
+# Yuraj Gupta — Premium Portfolio
+
+A premium, animated personal-brand portfolio website for **Yuraj Gupta**, a Business Administration graduate focused on Operations & Business Development — built to feel like a modern SaaS product site (Apple / Stripe / Linear / Vercel inspired), not a resume.
+
+## Tech Stack
+
+- **React 19 + Vite** — fast dev/build tooling
+- **Tailwind CSS 3** — utility-first styling with a custom design system
+- **Framer Motion** — scroll reveals, staggered animations, page-load sequence
+- **React Router DOM** — installed and ready for multi-page expansion
+- **React Icons** — icon set (Feather / Material / BoxIcons)
+- **Lenis** (`@studio-freight/lenis`) — buttery smooth scrolling
+- **EmailJS** (`@emailjs/browser`) — contact form email delivery
+- **Canvas API** — mouse-reactive particle background (no extra 3D dependency needed; Three.js can be added later if you want a 3D hero)
+
+## Getting Started
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Run the dev server
+
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`.
+
+### 3. Build for production
+
+```bash
+npm run build
+```
+
+Output is generated in the `dist/` folder, ready to deploy to Vercel, Netlify, GitHub Pages, or any static host.
+
+### 4. Preview the production build locally
+
+```bash
+npm run preview
+```
+
+## Connecting the Contact Form (EmailJS)
+
+The contact form is fully built (validation, states, glass UI) but needs your own EmailJS credentials to actually send mail:
+
+1. Create a free account at [emailjs.com](https://www.emailjs.com/).
+2. Create an Email Service and an Email Template.
+3. Open `src/components/Contact.jsx` and replace:
+   ```js
+   const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+   const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+   const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+   ```
+   with the values from your EmailJS dashboard.
+
+Until configured, submitting the form will show a friendly error state.
+
+## Adding Your Resume
+
+Place your resume PDF in `public/` and name it `Yuraj_Gupta_Resume.pdf` (a placeholder text file is included at that path to show where it goes — delete it once you add the real PDF). The **Download Resume** button in the hero section already links to `/Yuraj_Gupta_Resume.pdf`.
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 
 ## Folder Structure
 
 ```
 src/
+<<<<<<< HEAD
   components/          Public-site sections & reusable UI (Hero, About, Skills, Contact, …)
   pages/
     PortfolioSite.jsx   Assembles all public sections
@@ -130,3 +198,86 @@ public/
 ---
 
 Designed & developed with React, Tailwind CSS, and Supabase.
+=======
+  components/     All UI sections & reusable pieces
+    Navbar.jsx
+    Hero.jsx
+    About.jsx
+    Education.jsx
+    Skills.jsx
+    Projects.jsx
+    Certification.jsx
+    Languages.jsx
+    Attributes.jsx
+    WhyHireMe.jsx
+    Achievements.jsx
+    Contact.jsx
+    Footer.jsx
+    Loader.jsx
+    Cursor.jsx
+    Background.jsx
+    ScrollProgress.jsx
+    MagneticButton.jsx
+    SectionHeading.jsx
+  data/
+    portfolioData.js   Single source of truth for all content (edit this to update copy)
+  hooks/
+    useLenis.js         Smooth-scroll setup
+    useCountUp.js        Animated counters
+  pages/               Reserved for future multi-page routes
+  animations/          Reserved for shared motion variants
+  utils/               Reserved for helper functions
+  App.jsx
+  main.jsx
+  index.css            Design tokens, glassmorphism, cursor, shine, gradients
+public/
+  favicon.svg
+  Yuraj_Gupta_Resume.pdf   ← add your real resume here
+```
+
+## Editing Content
+
+Almost everything on the page — name, title, skills, projects, achievements, contact info — is centralized in **`src/data/portfolioData.js`**. Update that file and the whole site updates automatically; you shouldn't need to touch individual components for copy changes.
+
+## Design System
+
+| Token       | Value      |
+|-------------|------------|
+| Primary     | `#0F172A`  |
+| Secondary   | `#111827`  |
+| Accent      | `#2563EB`  |
+| Highlight   | `#60A5FA`  |
+| White       | `#FFFFFF`  |
+| Headings    | Poppins    |
+| Body        | Inter      |
+
+## Features Implemented
+
+- Sticky glass navbar with scroll-spy active link and mobile menu
+- Animated loading screen
+- Custom cursor (desktop only; falls back to native cursor on touch devices)
+- Mouse-reactive particle background, gradient blobs, glassmorphism throughout
+- Framer Motion scroll reveals on every section
+- Animated hero "business dashboard" card with progress bars
+- Animated counters (About section)
+- Vertical education timeline
+- Bento-grid business skills + interactive software/GST skill cards
+- Academic project cards
+- Certification card with shine/shimmer sweep animation
+- Animated circular language proficiency indicators
+- Personal attribute & "Why Hire Me" glass cards with hover glow
+- Achievements stat grid
+- Contact form with client-side validation, EmailJS integration point, and an embedded map
+- Magnetic buttons with ripple click effect
+- Scroll progress indicator
+- Fully responsive (mobile, tablet, laptop, desktop)
+- Respects `prefers-reduced-motion`
+
+## Notes on "Optional" Libraries
+
+The original brief listed GSAP and Three.js as optional. This build achieves all requested motion (page load, scroll reveals, hover/glow, magnetic buttons, particles, parallax blobs) using **Framer Motion + Canvas**, keeping the bundle lean. If you'd like a 3D hero element or GSAP-driven scroll choreography layered on top, both libraries can be added with `npm install gsap three` and wired into `Hero.jsx` / `Background.jsx`.
+
+---
+
+Designed & developed with React + Tailwind CSS.
+>>>>>>> 3e28ed9 (fix vercel deployment issue)

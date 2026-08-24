@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
 import { FiZap } from "react-icons/fi";
 import SectionHeading from "./SectionHeading";
+<<<<<<< HEAD
 import { usePortfolioData } from "../context/PortfolioDataContext";
 
 export default function Attributes() {
   const { personalAttributes } = usePortfolioData();
+=======
+import { personalAttributes } from "../data/portfolioData";
+
+export default function Attributes() {
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   return (
     <section id="attributes" className="section-pad relative">
       <div className="max-w-6xl mx-auto px-6">

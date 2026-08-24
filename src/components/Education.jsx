@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
 import { FiBookOpen } from "react-icons/fi";
 import SectionHeading from "./SectionHeading";
+<<<<<<< HEAD
 import { usePortfolioData } from "../context/PortfolioDataContext";
 
 export default function Education() {
   const { education } = usePortfolioData();
+=======
+import { education } from "../data/portfolioData";
+
+export default function Education() {
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   return (
     <section id="education" className="section-pad relative">
       <div className="max-w-4xl mx-auto px-6">

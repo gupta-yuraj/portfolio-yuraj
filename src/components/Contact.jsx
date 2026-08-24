@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+<<<<<<< HEAD
 import {
   FiMail,
   FiPhone,
@@ -26,11 +27,24 @@ const emailjsConfigured =
   EMAILJS_SERVICE_ID !== "YOUR_SERVICE_ID" &&
   EMAILJS_TEMPLATE_ID !== "YOUR_TEMPLATE_ID" &&
   EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY";
+=======
+import { FiMail, FiPhone, FiMapPin, FiSend, FiCheckCircle, FiAlertCircle } from "react-icons/fi";
+import SectionHeading from "./SectionHeading";
+import MagneticButton from "./MagneticButton";
+import { personal } from "../data/portfolioData";
+
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 
 const initialForm = { name: "", email: "", subject: "", message: "" };
 
 export default function Contact() {
+<<<<<<< HEAD
   const { personal } = usePortfolioData();
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
@@ -56,6 +70,7 @@ export default function Contact() {
     if (!validate()) return;
     setStatus("sending");
     try {
+<<<<<<< HEAD
       if (!isSupabaseConfigured || !supabase) {
         throw new Error("Supabase isn't configured yet — see README for setup steps.");
       }
@@ -97,6 +112,24 @@ export default function Contact() {
       setForm(initialForm);
     } catch (err) {
       console.error(err);
+=======
+      // Configure EmailJS with your own service/template/public keys
+      // to enable live email delivery. See README for setup steps.
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject,
+          message: form.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+      setStatus("success");
+      setForm(initialForm);
+    } catch (err) {
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
       setStatus("error");
     }
   };
@@ -179,7 +212,11 @@ export default function Contact() {
             )}
             {status === "error" && (
               <p className="flex items-center gap-2 text-sm text-red-400">
+<<<<<<< HEAD
                 <FiAlertCircle /> Something went wrong. Please make sure Supabase is configured (see README), or email me directly.
+=======
+                <FiAlertCircle /> Something went wrong. Please configure EmailJS keys in Contact.jsx, or email me directly.
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
               </p>
             )}
           </motion.form>
@@ -225,6 +262,7 @@ export default function Contact() {
               </div>
             </div>
 
+<<<<<<< HEAD
             {personal.linkedinUrl && (
               <a
                 href={personal.linkedinUrl}
@@ -243,6 +281,8 @@ export default function Contact() {
               </a>
             )}
 
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
             <div className="rounded-2xl overflow-hidden border border-white/10 h-48">
               <iframe
                 title="Location map"
@@ -260,4 +300,8 @@ export default function Contact() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3e28ed9 (fix vercel deployment issue)

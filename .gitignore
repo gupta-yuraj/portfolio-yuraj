@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules/
 dist/
 dist-ssr/
@@ -6,3 +7,11 @@ dist-ssr/
 .env
 .env.*
 !.env.example
+=======
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.env
+>>>>>>> 3e28ed9 (fix vercel deployment issue)

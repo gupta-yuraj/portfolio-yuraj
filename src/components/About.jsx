@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import useCountUp from "../hooks/useCountUp";
+<<<<<<< HEAD
 import { usePortfolioData } from "../context/PortfolioDataContext";
+=======
+import { aboutCounters, objective } from "../data/portfolioData";
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 import { FiTarget } from "react-icons/fi";
 
 function Counter({ value, suffix, label, delay }) {
@@ -25,7 +29,10 @@ function Counter({ value, suffix, label, delay }) {
 }
 
 export default function About() {
+<<<<<<< HEAD
   const { aboutCounters, objective } = usePortfolioData();
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   return (
     <section id="about" className="section-pad relative">
       <div className="max-w-6xl mx-auto px-6">

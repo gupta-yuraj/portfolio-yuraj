@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
+<<<<<<< HEAD
 import { usePortfolioData } from "../context/PortfolioDataContext";
 
 export default function WhyHireMe() {
   const { whyHireMe } = usePortfolioData();
+=======
+import { whyHireMe } from "../data/portfolioData";
+
+export default function WhyHireMe() {
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   return (
     <section id="why-hire-me" className="section-pad relative">
       <div className="max-w-6xl mx-auto px-6">

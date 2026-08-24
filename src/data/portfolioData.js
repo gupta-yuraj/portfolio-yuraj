@@ -13,6 +13,7 @@ import {
 import { BsGraphUpArrow } from "react-icons/bs";
 import { RiFileExcel2Fill } from "react-icons/ri";
 
+<<<<<<< HEAD
 /*
   Static fallback content — what the site renders when Supabase isn't
   configured yet, or while the very first fetch is in flight. Shape must
@@ -21,6 +22,8 @@ import { RiFileExcel2Fill } from "react-icons/ri";
   hook without knowing which source the data came from.
 */
 
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 export const personal = {
   name: "Yuraj Gupta",
   titleLine1: "Business Administration Graduate",
@@ -29,6 +32,7 @@ export const personal = {
   phone: "+91 6362570156",
   email: "guptayuraj10@gmail.com",
   mapsQuery: "HSR Layout 5th Sector Bangalore India",
+<<<<<<< HEAD
   linkedin:"https://www.linkedin.com/in/yuraj-gupta-576b41313/",
     instagram:"https://www.instagram.com/yurajgupta09/"
 };
@@ -44,6 +48,11 @@ import { FaLinkedinIn } from "react-icons/fa";
   <FaLinkedinIn />
 </a>
 export const objective = */}
+=======
+};
+
+export const objective =
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   "Motivated BBA graduate seeking an entry-level position in business management where I can apply my knowledge of business operations, customer handling, and organizational skills to contribute to company growth. Open to flexible and rotational shifts.";
 
 export const heroSubtitle =
@@ -78,12 +87,15 @@ export const education = [
     place: "Birgunj, Nepal",
     period: "2019 – 2021",
   },
+<<<<<<< HEAD
   {
     degree: "School",
     school: "Shree Zilla Uchangal Higher Secondary School",
     place: "Pokhariya-04, Nepal",
     // period: "2019 – 2021",
   },
+=======
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 ];
 
 export const businessSkills = [
@@ -124,7 +136,11 @@ export const softwareSkills = [
   },
 ];
 
+<<<<<<< HEAD
 export const typingSpeed = "35+ WPM";
+=======
+export const typingSpeed = "30+ WPM";
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 
 export const projects = [
   {
@@ -152,6 +168,10 @@ export const languages = [
   { name: "English", level: "Proficient", percent: 90 },
   { name: "Hindi", level: "Proficient", percent: 90 },
   { name: "Nepali", level: "Native", percent: 100 },
+<<<<<<< HEAD
+=======
+  { name: "Bhojpuri", level: "Native", percent: 100 },
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
 ];
 
 export const personalAttributes = [

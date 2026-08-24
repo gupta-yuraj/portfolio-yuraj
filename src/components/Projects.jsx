@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
+<<<<<<< HEAD
 import { usePortfolioData } from "../context/PortfolioDataContext";
 
 export default function Projects() {
   const { projects } = usePortfolioData();
+=======
+import { projects } from "../data/portfolioData";
+
+export default function Projects() {
+>>>>>>> 3e28ed9 (fix vercel deployment issue)
   return (
     <section id="projects" className="section-pad relative">
       <div className="max-w-6xl mx-auto px-6">
